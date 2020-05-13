@@ -1,0 +1,27 @@
+{
+  "name": "whatdoiowe",
+  "version": "0.0.1",
+  "description": "TBD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brothers-SI/whatdoiowe.git"
+  },
+  "keywords": [
+    "financial",
+    "credit",
+    "debt"
+  ],
+  "author": "Brothers SI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brothers-SI/whatdoiowe/issues"
+  },
+  "homepage": "https://github.com/Brothers-SI/whatdoiowe#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.50.0"
+  }
+}
