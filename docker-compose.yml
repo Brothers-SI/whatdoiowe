@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  mongodb:
+    image: 'mongo:3.6'
+    ports:
+      - '27017:27017'
+  node:
+    image: 'node:13-alpine'
+  nginx:
+    image: 'nginx:1.18-alpine'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - '80:80'
+    depends_on:
+      - node
