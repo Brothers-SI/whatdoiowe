@@ -1,4 +1,6 @@
-if [ $NODE_ENV = "dev" ]; then
+#!/bin/sh
+set -e
+if [ "$NODE_ENV" = 'dev' ]; then
   yarn install --production=false
   yarn dev
 fi
