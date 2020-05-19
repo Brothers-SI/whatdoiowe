@@ -4,13 +4,20 @@ services:
     image: 'mongo:3.6'
     ports:
       - '27017:27017'
+    volumes:
+      - ./docker/mongodb:/data
   node:
-    image: 'node:13-alpine'
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    volumes:
+      - ./:/var/www/
   nginx:
     image: 'nginx:1.18-alpine'
     volumes:
       - ./nginx:/etc/nginx/conf.d
     ports:
       - '80:80'
+    restart: always
     depends_on:
       - node
