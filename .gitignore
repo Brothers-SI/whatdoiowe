@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Docker persistency
+docker/mongodb/*
+!docker/mongodb/.gitkeep
