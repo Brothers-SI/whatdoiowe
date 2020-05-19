@@ -4,7 +4,8 @@
   "description": "TBD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,11 @@
   },
   "homepage": "https://github.com/Brothers-SI/whatdoiowe#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "node-telegram-bot-api": "^0.50.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
   }
 }
