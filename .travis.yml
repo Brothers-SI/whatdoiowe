@@ -1,0 +1,20 @@
+os: linux
+language: node_js
+
+notifications:
+  slack: si-ufsm:YrLcWDyPVQpNcqk1QmhS5njy
+
+install:
+  - yarn
+
+jobs:
+  include:
+    - stage: Lint
+    if: branch NOT IN (master,production,improving-travis)
+    script: yarn lint
+
+    - stage: Test and Build
+    if: branch NOT IN (master,production,improving-travis)
+    script:
+      - yarn test:unit
+      - yarn build
